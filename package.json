@@ -1,0 +1,22 @@
+{
+  "name": "pkg-test",
+  "bin": "./start.js",
+  "scripts": {
+    "start": "pkg . && ./build/pkg-test"
+  },
+  "dependencies": {
+    "@openzim/libzim": "^3.0.0"
+  },
+  "devDependencies": {
+    "pkg": "^5.8.1"
+  },
+  "pkg": {
+    "assets": [
+      "./node_modules/@openzim/libzim/build/Release/**/*"
+    ],
+    "targets": [
+      "node18"
+    ],
+    "outputPath": "build"
+  }
+}
